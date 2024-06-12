@@ -22,7 +22,7 @@ const Earth = () => {
         bumpImageUrl="https://unpkg.com/three-globe/example/img/earth-topology.png"
         width={800} // Initial width
         height={800} // Initial height
-        className="max-w-full max-h-full md:w-3/4 md:h-3/4"
+        className="max-w-full max-h-full md:w-2/3 md:h-2/3 lg:w-1/2 lg:h-1/2"
       />
 
       {/* <Main /> */}
