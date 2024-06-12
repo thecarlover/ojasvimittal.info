@@ -15,17 +15,16 @@ const Earth = () => {
   }, []);
 
   return (
-    <div className="earth-container flex justify-center items-center h-screen">
+    <div className="earth-container relative flex justify-center items-center h-screen">
       <Globe
         ref={globeEl}
         globeImageUrl="https://unpkg.com/three-globe/example/img/earth-dark.jpg"
         bumpImageUrl="https://unpkg.com/three-globe/example/img/earth-topology.png"
         width={800} // Initial width
         height={800} // Initial height
-        className="max-w-full max-h-full md:w-2/3 md:h-2/3 lg:w-1/2 lg:h-1/2"
+        className="absolute w-full h-full"
       />
-
-      {/* <Main /> */}
+      <Main />
     </div>
   );
 };

@@ -1,28 +1,31 @@
 import React from 'react';
-import './Main.css';
+import myy from '../assets/me.png';
+import git from '../assets/git.png';
+import link from '../assets/link.png'
+import Tweet from '../assets/twitter.png'
 
 const Main = () => {
   const socialMediaLinks = [
-    { name: 'GitHub', url: 'https://github.com/yourusername', logo: 'https://image.flaticon.com/icons/png/512/25/25231.png' },
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/yourusername/', logo: 'https://image.flaticon.com/icons/png/512/174/174857.png' },
-    { name: 'Twitter', url: 'https://twitter.com/yourusername', logo: 'https://image.flaticon.com/icons/png/512/733/733579.png' },
+    { name: 'GitHub', url: 'https://github.com/thecarlover', logo: git },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/ojasvi-mittal-a787821b2/', logo: link },
+    { name: 'Twitter', url: 'https://x.com/s1mittal9804', logo: Tweet },
   ];
 
   const otherLinks = [
-    { name: 'Resume', url: '/path/to/your/resume.pdf', logo: 'https://example.com/resume.png' },
-    { name: 'YouTube Channel', url: 'https://www.youtube.com/channel/yourchannelid', logo: 'https://example.com/youtube.png' },
+    { name: 'Resume', url: '/path/to/your/resume.pdf' },
+    { name: 'YouTube Channel', url: 'https://www.youtube.com/channel/yourchannelid' },
   ];
 
   return (
-    <div className="main-container min-h-screen text-white flex flex-col items-center p-8">
-      <div className="profile text-center mb-8">
+    <div className="main-container absolute top-0 right-0 z-10 w-full h-full flex flex-col items-center justify-center text-white bg-black bg-opacity-5 p-8 lg:w-auto lg:bg-transparent lg:flex-row lg:justify-start lg:items-start lg:gap-8 lg:px-16 lg:py-8 lg:right-auto lg:left-0">
+      <div className="profile text-center mb-8 lg:mb-0">
         <img
           className="rounded-full w-32 h-32 mx-auto mb-4"
-          src="https://via.placeholder.com/150"
-          alt="Your Name"
+          src={myy}
+          alt="Ojasvi Mittal"
         />
-        <h1 className="text-3xl font-bold mb-2">Your Name</h1>
-        <p className="text-lg">A short bio about yourself.</p>
+        <h1 className="text-3xl font-bold mb-2">Ojasvi Mittal</h1>
+        <p className="text-lg">I Develop for humans</p>
       </div>
 
       <div className="social-media mb-8">
@@ -30,7 +33,11 @@ const Main = () => {
         <div className="flex flex-wrap justify-center space-x-4">
           {socialMediaLinks.map((link) => (
             <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer">
-              <img className="w-8 h-8 mb-2 md:mb-0" src={link.logo} alt={link.name} />
+              {link.name === 'Twitter' ? (
+                <img className="w-8 h-8 mb-2 md:mb-0 filter invert" src={link.logo} alt={link.name} />
+              ) : (
+                <img className="w-8 h-8 mb-2 md:mb-0" src={link.logo} alt={link.name} />
+              )}
             </a>
           ))}
         </div>
@@ -45,9 +52,8 @@ const Main = () => {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="link-box border-2 border-yellow-500 p-4 text-center rounded hover:border-yellow-300 transition duration-300 ease-in-out"
+              className="link-box border-4  border-yellow-500 p-4 text-center rounded hover:border-yellow-300 transition duration-300 ease-in-out"
             >
-              <img className="w-8 h-8 mb-2 mx-auto" src={link.logo} alt={link.name} />
               <span>{link.name}</span>
             </a>
           ))}
@@ -55,6 +61,6 @@ const Main = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Main;
