@@ -4,6 +4,8 @@ import git from '../assets/git.png';
 import link from '../assets/link.png';
 import Tweet from '../assets/twitter.png';
 
+
+
 const Main = () => {
   const socialMediaLinks = [
     { name: 'GitHub', url: 'https://github.com/thecarlover', logo: git },
@@ -12,14 +14,23 @@ const Main = () => {
   ];
 
   const otherLinks = [
-    { name: 'Resume', url: '/path/to/your/resume.pdf' },
-    { name: 'YouTube Channel', url: 'https://www.youtube.com/channel/yourchannelid' },
-    {},
-    { },
-    {},
-    {},
-    {},
-    {},
+    { name: 'Resume', url: 'https://drive.google.com/file/d/1bh1MR2TtUAE-e728SMPhK-UpSuTn-y3d/view?usp=share_link' },
+    {name: 'Portfolio', url: 'https://www.ojasvimittal.site'},
+    { name: 'Youtube Channel', url: 'https://www.youtube.com/channel/UCOH3y7IVZ8pNUothj635Wyg' },
+    { name: "Join me on Dev.to", url: 'https://dev.to/thecarlover'},
+    { name: 'Reddit', url: 'https://www.reddit.com/user/the_car_lover/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button'},
+    {name: 'Yt music Playlist' ,url: 'https://music.youtube.com/playlist?list=PLLxyxu4E4eoJ8phPlj0fo1k29LxG02PNB&si=oqnu6QTgVE-I9nEF'},
+    {name: 'Discord',url: 'https://discord.gg/WC7ejt6F'},
+    {name: 'Instagram', url: 'https://www.instagram.com/the_car_lover.6505/'},
+    { name: 'Pinterest', url: 'https://pinterest.com/iamcarlover6505',},
+    { name: 'Behance', url: 'https://www.behance.net/ojasvimittal' },
+    { name: 'Blogs', url: 'https://ojasvimittal.site/blog/'},
+    { name: 'Mail me', url: 'mailto:s1mittal@hotmail.com' }
+
+
+
+
+
   ];
 
   return (
@@ -58,7 +69,7 @@ const Main = () => {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="link-box border-4 border-yellow-500 p-4 text-center rounded hover:border-yellow-300 transition duration-300 ease-in-out"
+              className="link-box border-4 border-yellow-500 p-1 text-center rounded hover:border-blue-500 transition duration-500 ease-in-out "
             >
               <span>{link.name}</span>
             </a>
