@@ -1,8 +1,8 @@
 import React from 'react';
 import myy from '../assets/me.png';
 import git from '../assets/git.png';
-import link from '../assets/link.png'
-import Tweet from '../assets/twitter.png'
+import link from '../assets/link.png';
+import Tweet from '../assets/twitter.png';
 
 const Main = () => {
   const socialMediaLinks = [
@@ -17,8 +17,8 @@ const Main = () => {
   ];
 
   return (
-    <div className="main-container absolute top-0 right-0 z-10 w-full h-full flex flex-col items-center justify-center text-white bg-black bg-opacity-5 p-8 lg:w-auto lg:bg-transparent lg:flex-row lg:justify-start lg:items-start lg:gap-8 lg:px-16 lg:py-8 lg:right-auto lg:left-0">
-      <div className="profile text-center mb-8 lg:mb-0">
+    <div className="main-container absolute top-0 right-0 z-10 w-full h-full flex flex-col items-center justify-center text-white bg-black bg-opacity-5 p-8 lg:w-auto lg:bg-transparent lg:justify-center lg:items-center lg:gap-8 lg:px-16 lg:py-8 lg:right-auto lg:left-0">
+      <div className="profile text-center mb-8 lg:mb-8">
         <img
           className="rounded-full w-32 h-32 mx-auto mb-4"
           src={myy}
@@ -45,14 +45,14 @@ const Main = () => {
 
       <div className="other-links">
         <h2 className="text-2xl font-bold mb-4">My Links</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4">
           {otherLinks.map((link) => (
             <a
               key={link.name}
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="link-box border-4  border-yellow-500 p-4 text-center rounded hover:border-yellow-300 transition duration-300 ease-in-out"
+              className="link-box border-4 border-yellow-500 p-4 text-center rounded hover:border-yellow-300 transition duration-300 ease-in-out"
             >
               <span>{link.name}</span>
             </a>

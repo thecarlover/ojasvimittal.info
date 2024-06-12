@@ -20,9 +20,11 @@ const Earth = () => {
         ref={globeEl}
         globeImageUrl="https://unpkg.com/three-globe/example/img/earth-dark.jpg"
         bumpImageUrl="https://unpkg.com/three-globe/example/img/earth-topology.png"
-        width={800} // Initial width
-        height={800} // Initial height
         className="absolute w-full h-full"
+        width={window.innerWidth < 768 ? 400 : 700} 
+        height={window.innerWidth < 768 ? 400 : 700} 
+       
+
       />
       <Main />
     </div>
