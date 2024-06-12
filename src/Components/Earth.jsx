@@ -21,8 +21,8 @@ const Earth = () => {
         globeImageUrl="https://unpkg.com/three-globe/example/img/earth-dark.jpg"
         bumpImageUrl="https://unpkg.com/three-globe/example/img/earth-topology.png"
         className="absolute w-full h-full"
-        width={window.innerWidth < 768 ? 400 : 700} 
-        height={window.innerWidth < 768 ? 400 : 700} 
+        width={window.innerWidth < 768 ? 350 : 700} 
+        height={window.innerWidth < 768 ? 350 : 700} 
        
 
       />
