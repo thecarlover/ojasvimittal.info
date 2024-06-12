@@ -14,6 +14,12 @@ const Main = () => {
   const otherLinks = [
     { name: 'Resume', url: '/path/to/your/resume.pdf' },
     { name: 'YouTube Channel', url: 'https://www.youtube.com/channel/yourchannelid' },
+    {},
+    { },
+    {},
+    {},
+    {},
+    {},
   ];
 
   return (
@@ -45,7 +51,7 @@ const Main = () => {
 
       <div className="other-links">
         <h2 className="text-2xl font-bold mb-4">My Links</h2>
-        <div className="grid grid-cols-1 gap-4">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
           {otherLinks.map((link) => (
             <a
               key={link.name}
