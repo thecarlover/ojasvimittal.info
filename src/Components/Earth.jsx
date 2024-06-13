@@ -18,13 +18,11 @@ const Earth = () => {
     <div className="earth-container relative flex justify-center items-center h-screen">
       <Globe
         ref={globeEl}
-        globeImageUrl="https://unpkg.com/three-globe/example/img/earth-dark.jpg"
+        globeImageUrl="https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg" // Change to a lighter globe image
         bumpImageUrl="https://unpkg.com/three-globe/example/img/earth-topology.png"
         className="absolute w-full h-full"
-        width={window.innerWidth < 768 ? 350 : 800} 
-        height={window.innerWidth < 768 ? 350 : 800} 
-       
-
+        width={window.innerWidth < 768 ? 350 : 800}
+        height={window.innerWidth < 768 ? 350 : 800}
       />
       <Main />
     </div>
