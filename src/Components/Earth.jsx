@@ -44,13 +44,23 @@ const Earth = () => {
         labelAltitude={0.01}
       />
 
-      <button
-        onClick={toggleMainVisibility}
-        onTouchEnd={toggleMainVisibility}
-        className="absolute top-4 right-4 p-4 text-white bg-blue-500 rounded-lg cursor-pointer hover:bg-blue-700 focus:bg-blue-700 active:bg-blue-900"
-      >
-        {isMainVisible ? "Hide Info" : "Show Info"}
-      </button>
+      {isMainVisible ? (
+        <button
+          onClick={toggleMainVisibility}
+          onTouchEnd={toggleMainVisibility}
+          className="absolute top-4 right-4 p-2 text-white bg-red-500 rounded-lg cursor-pointer hover:bg-red-700 focus:bg-red-700 active:bg-red-900"
+        >
+          Hide Info
+        </button>
+      ) : (
+        <button
+          onClick={toggleMainVisibility}
+          onTouchEnd={toggleMainVisibility}
+          className="absolute top-4 right-4 p-2 text-white bg-green-500 rounded-lg cursor-pointer hover:bg-green-700 focus:bg-green-700 active:bg-green-900"
+        >
+          Show Info
+        </button>
+      )}
 
       {isMainVisible && <Main />}
     </div>
