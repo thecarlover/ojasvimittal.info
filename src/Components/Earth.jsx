@@ -17,7 +17,7 @@ const Earth = () => {
   }, []);
 
   const dehradunLabel = [
-    { lat: 30.3165, lng: 78.0322, name: 'Dehradun' },
+    { lat: 30.3165, lng: 78.0322, name: "Dehradun" },
   ];
 
   const toggleMainVisibility = () => {
@@ -25,7 +25,7 @@ const Earth = () => {
   };
 
   return (
-    <div className="earth-container relative flex justify-center items-center h-screen">
+    <div className="earth-container relative flex justify-center items-center h-screen bg-black">
       <Globe
         ref={globeEl}
         globeImageUrl="https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
@@ -39,14 +39,15 @@ const Earth = () => {
         labelLng={(d) => d.lng}
         labelText={(d) => d.name}
         labelSize={2}
-        labelColor={() => 'rgba(255, 255, 255, 0.75)'}
+        labelColor={() => "rgba(255, 255, 255, 0.75)"}
         labelDotRadius={1}
         labelAltitude={0.01}
       />
 
       <button
         onClick={toggleMainVisibility}
-        className="absolute top-4 right-4 p-2 bg-blue-500 text-white rounded"
+        onTouchEnd={toggleMainVisibility}
+        className="absolute top-4 right-4 p-4 text-white bg-blue-500 rounded-lg cursor-pointer hover:bg-blue-700 focus:bg-blue-700 active:bg-blue-900"
       >
         {isMainVisible ? "Hide Info" : "Show Info"}
       </button>
